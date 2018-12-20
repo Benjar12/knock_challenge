@@ -63,7 +63,7 @@ box.
 If you have docker-compose installed it's pretty straight foward to start things up.
 
 1. go get github.com/Benjar12/knock_challenge
-2. cd $GOPATH/src/Benjar12/knock_challenge
+2. cd $GOPATH/src/github.com/Benjar12/knock_challenge
 3. docker-compose up -d; docker-compose logs -f
 4. Run curl
 
@@ -80,7 +80,7 @@ If you have docker-compose installed it's pretty straight foward to start things
 If you want to run things locally there is only one aditional step.
 
 1. go get github.com/Benjar12/knock_challenge
-2. cd $GOPATH/src/Benjar12/knock_challenge
+2. cd $GOPATH/src/github.com/Benjar12/knock_challenge
 3. export DATA_SOURCE="mysql_user:mysql_password@tcp(127.0.0.1:3306)/mysql_db"
 4. go run main.go
 5. Run curl
