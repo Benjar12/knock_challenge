@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  etl_micro:
+    environment:
+    - DATA_SOURCE=root:admin@tcp(rdb:3306)/knock_challenge
+    build: .
+    image: golang:1.6.1-alpine
+    volumes:
+      - $GOPATH/:/go
+      - fileuploads:/tmp
+    ports:
+      - "3302:3302"
+    working_dir: /go/src/github.com/Benjar12/knock_challenge
+    command: main
+
+  rdb:
+      image: mysql
+      command: --init-file /conf/init.sql --default-authentication-plugin=mysql_native_password
+      # restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: admin
+      ports:
+        - 3306:3888
+      volumes:
+        - ./conf:/conf
+
+volumes:
+  fileuploads:
+    driver: local

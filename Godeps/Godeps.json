@@ -1,0 +1,22 @@
+{
+	"ImportPath": "github.com/Benjar12/knock_challenge",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/go-sql-driver/mysql",
+			"Comment": "v1.4.0-5-g99ff426",
+			"Rev": "99ff426eb706cffe92ff3d058e168b278cabf7c7"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.2-3-gcb46983",
+			"Rev": "cb4698366aa625048f3b815af6a0dea8aef9280a"
+		},
+		{
+			"ImportPath": "github.com/satori/go.uuid",
+			"Comment": "v1.2.0-4-g36e9d2e",
+			"Rev": "36e9d2ebbde5e3f13ab2e25625fd453271d6522e"
+		}
+	]
+}
